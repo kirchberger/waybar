@@ -1,0 +1,70 @@
+
+{
+	"layer": "bottom",
+	"position": "left",
+	"width": 40,
+	"spacing": 1,
+	"margin-top": 0,
+	"margin-bottom": 0,
+	"margin-left": 0,
+	"margin-right": 0,
+	"reload_style_on_change": true,
+	"expand-left": true,
+	"fixed-center": true,
+	"expand-right": true,
+	"modules-left" : ["custom/nix","hyprland/workspaces"],
+
+ 	"modules-center": ["clock#time","clock#date"], 
+
+	"modules-right": ["custom/cpulogo","cpu","battery"],
+
+	"custom/nix": {
+		"justify": "center",
+		"format": ""
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "󱅾",
+			"default": "",
+			"empty": "",
+			"visible": "󰧻"
+		},
+		"persistent-workspaces": {
+			"eDP-1": [1, 2, 3, 4, 5]  
+		}
+	},
+	"clock#time": {
+		"justify": "center",
+		"timezone": "America/Toronto",
+		"format": "{:%H\n%M}"
+	},
+
+	"clock#date": {
+		"justify": "center",
+		"timezone": "America/Toronto",
+		"format": "{:%a\n%d\n%b\n%y}"
+	},
+
+	"custom/cpulogo": {
+		"justify": "center",
+		"format": ""
+	},
+	"cpu": {
+		"justify": "center",
+		"format": "{usage}",
+		"interval": 1,
+		"tooltip": false
+	},
+
+	"battery": {
+		"justify": "center",
+		"format": "{icon}\n{capacity}",
+		"tooltip": false,
+		"states": {
+			"low": 10
+		},
+		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	}
+}
+
